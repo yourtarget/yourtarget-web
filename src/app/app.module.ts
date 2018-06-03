@@ -3,11 +3,17 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { WelcomeComponent } from './welcome.component';
+import { GeneratorComponent } from './generator.component';
+import { VerticalBarComponent } from './vertical-bar.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VerticalBarComponent,
+    WelcomeComponent,
+    GeneratorComponent
   ],
   imports: [
     BrowserModule
@@ -15,4 +21,5 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
