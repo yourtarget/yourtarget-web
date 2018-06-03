@@ -25,7 +25,7 @@ import { Component } from '@angular/core';
     }
 
     app-welcome {
-      margin-bottom: 5em;
+      margin-bottom: 2em;
     }
 
     .main {

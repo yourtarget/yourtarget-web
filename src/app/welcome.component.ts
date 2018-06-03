@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-welcome',
   template: `
-    <div class="welcome">
+    <div>
       <p class="slogan">ПРИМИ УЧАСТИЕ В ГЛОБАЛЬНОМ <b>FLASHMOB</b></p>
       <p class="goal">
         Цель нашего проекта помочь каждому обратить на себя внимание,<br/>
@@ -59,7 +59,7 @@ import { Component } from '@angular/core';
     }
 
     .goal {
-      margin-bottom: 3em;
+      margin-bottom: 2em;
       font-size: 0.9em;
     }
 
