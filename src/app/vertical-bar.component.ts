@@ -5,13 +5,13 @@ import { Component } from '@angular/core';
   template: `
     <div class="app-vertical-bar">
       <div class="social-network">
-        <img src="https://i.stack.imgur.com/o1z7p.jpg"/>
+        <img src="assets/lena.jpg"/>
       </div>
       <div class="social-network">
-        <img src="https://i.stack.imgur.com/o1z7p.jpg"/>
+        <img src="assets/lena.jpg"/>
       </div>
       <div class="social-network">
-        <img src="https://i.stack.imgur.com/o1z7p.jpg"/>
+        <img src="assets/lena.jpg"/>
       </div>
     </div>
   `,

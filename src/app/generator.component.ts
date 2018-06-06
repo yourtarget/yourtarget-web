@@ -30,7 +30,7 @@ import { Option, Question, Step } from './models';
         </div>
         <div class="avatar-container">
           <div class="avatar">
-            <img style="width: 100%" src="https://i.stack.imgur.com/o1z7p.jpg"/>
+            <img style="width: 100%" src="assets/lena.jpg"/>
           </div>
           <p class="avatar-info">
             ПО ЗАВЕРШЕНИЮ, БУДЕТ ОТКРЫТ НОВЫЙ

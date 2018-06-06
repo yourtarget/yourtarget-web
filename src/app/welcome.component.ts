@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
       <div class="cards">
         <div class="card">
           <div class="card__icon">
-            <img src="https://i.stack.imgur.com/o1z7p.jpg"/>
+            <img src="assets/lena.jpg"/>
           </div>
           <p class="card__description">
             Ниже, каждый может получить своего аватара,
@@ -24,7 +24,7 @@ import { Component } from '@angular/core';
         </div>
         <div class="card">
           <div class="card__icon">
-            <img src="https://i.stack.imgur.com/o1z7p.jpg"/>
+            <img src="assets/lena.jpg"/>
           </div>
           <p class="card__description">
             <b>Получив уникального</b> аватара, Вы можете разместить
@@ -34,7 +34,7 @@ import { Component } from '@angular/core';
         </div>
         <div class="card">
           <div class="card__icon">
-            <img src="https://i.stack.imgur.com/o1z7p.jpg"/>
+            <img src="assets/lena.jpg"/>
           </div>
           <p class="card__description">
             Этим действием Вы получите классного аватара

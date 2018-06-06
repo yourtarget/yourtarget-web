@@ -12,7 +12,7 @@ import { ApiService } from './api.service';
       </p>
       <div class="carousel">
         <div *ngFor="let member of slice" class="member">
-          <img style="width: 100%" src="https://i.stack.imgur.com/o1z7p.jpg"/>
+          <img style="width: 100%" src="assets/lena.jpg"/>
         </div>
       </div>
     </div>
