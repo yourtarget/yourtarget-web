@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from './api.service';
+import { Option, Question, Step } from './models';
 
 @Component({
   selector: 'app-generator',
@@ -25,7 +27,12 @@ import { Component } from '@angular/core';
         </div>
       </div>
       <div class="survey-avatar-generation">
-        <div class="survey"></div>
+        <div class="survey">
+          <app-step [step]="step"
+                    (answered)="onAnswer($event)"
+                    (finished)="onFinish($event)">
+          </app-step>
+        </div>
         <div class="avatar-container">
           <div class="avatar"></div>
           <p class="avatar-info">
@@ -121,5 +128,40 @@ import { Component } from '@angular/core';
     }
   `]
 })
-export class GeneratorComponent {
+export class GeneratorComponent implements OnInit {
+  step: Step;
+  steps: Step[];
+
+  constructor(private apiService: ApiService) {
+  }
+
+  ngOnInit(): void {
+    this.apiService.fetchSteps()
+      .subscribe(steps => {
+        this.steps = steps;
+        this.nextStep();
+      });
+  }
+
+  onAnswer(question: Question, option: Option) {
+    console.log(`question: ${JSON.stringify(question)}, option: ${JSON.stringify(option)}`);
+  }
+
+  onFinish(step: Step) {
+    console.log(`Finish  step: ${JSON.stringify(step)}`);
+    this.nextStep();
+  }
+
+  nextStep(): void {
+    if (!this.step && this.steps.length) {
+      this.step = this.steps[0];
+    } else {
+      const si = this.steps.indexOf(this.step);
+      if (si < this.steps.length - 1) {
+        this.step = this.steps[si + 1];
+      } else {
+        alert('Survey done');
+      }
+    }
+  }
 }
