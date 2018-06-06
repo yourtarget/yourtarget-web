@@ -11,7 +11,8 @@ import { Option, Question, Step } from './models';
         <div class="pb">
           <span class="pb__title"><b>ПРОГРЕСС</b> СОЗДАНИЯ АВАТАРА</span>
           <div class="pb__steps">
-            <div *ngFor="let step of steps" class="pb-step">
+            <div *ngFor="let step of steps"
+                 class="pb-step" [ngClass]="{'pb-step--done': this.completedSteps.includes(step.id)}">
               <div class="pb-step__value"></div>
               <span class="pb-step__legend">
                 {{step.title}}<br/>{{step.id}}
@@ -74,20 +75,23 @@ import { Option, Question, Step } from './models';
       width: 100%;
     }
 
+    .pb-step--done .pb-step__value {
+      background-color: #00D47D;
+    }
+
     .pb-step__value {
       height: 10px;
-      background-color: #00D47D;
       margin: 0.5em 0;
+      border: 1px solid #00D47D;
+      border-collapse: collapse;
     }
 
     .pb-step:first-of-type .pb-step__value {
-      border-left: 1px solid #00D47D;
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
     }
 
     .pb-step:last-of-type .pb-step__value {
-      border-right: 1px solid #00D47D;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
     }
@@ -125,6 +129,7 @@ import { Option, Question, Step } from './models';
 export class GeneratorComponent implements OnInit {
   step: Step;
   steps: Step[];
+  completedSteps: number[] = [];
 
   constructor(private apiService: ApiService) {
   }
@@ -150,6 +155,7 @@ export class GeneratorComponent implements OnInit {
     if (!this.step && this.steps.length) {
       this.step = this.steps[0];
     } else {
+      this.completedSteps.push(this.step.id);
       const si = this.steps.indexOf(this.step);
       if (si < this.steps.length - 1) {
         this.step = this.steps[si + 1];
