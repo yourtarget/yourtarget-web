@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome.component';
 import { GeneratorComponent } from './generator.component';
 import { VerticalBarComponent } from './vertical-bar.component';
+import { ApiService } from './api.service';
+import { FormsModule } from '@angular/forms';
+import { StepComponent } from './step.component';
 
 
 @NgModule({
@@ -13,12 +16,14 @@ import { VerticalBarComponent } from './vertical-bar.component';
     AppComponent,
     VerticalBarComponent,
     WelcomeComponent,
-    GeneratorComponent
+    GeneratorComponent,
+    StepComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
