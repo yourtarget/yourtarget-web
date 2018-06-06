@@ -9,6 +9,7 @@ import { VerticalBarComponent } from './vertical-bar.component';
 import { ApiService } from './api.service';
 import { FormsModule } from '@angular/forms';
 import { StepComponent } from './step.component';
+import { MembersComponent } from './members.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { StepComponent } from './step.component';
     VerticalBarComponent,
     WelcomeComponent,
     GeneratorComponent,
-    StepComponent
+    StepComponent,
+    MembersComponent
   ],
   imports: [
     BrowserModule,

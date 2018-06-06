@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { Step } from './models';
+import { Member, Step } from './models';
 
 @Injectable()
 export class ApiService {
@@ -66,5 +66,15 @@ export class ApiService {
         ],
       },
     ]);
+  }
+
+  fetchMembers(): Observable<Member[]> {
+    const range = new Array(1000).fill(null);
+    return Observable.of(range.map((ignore, index) => {
+      return {
+        id: index,
+        name: `Member${index}`
+      };
+    }));
   }
 }

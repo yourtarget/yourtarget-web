@@ -4,11 +4,14 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <div class="app-component">
-      <app-vertical-bar></app-vertical-bar>
-      <div class="main">
-        <app-welcome></app-welcome>
-        <app-generator></app-generator>
+      <div class="container">
+        <app-vertical-bar></app-vertical-bar>
+        <div class="center">
+          <app-welcome></app-welcome>
+          <app-generator></app-generator>
+        </div>
       </div>
+      <app-members></app-members>
     </div>
   `,
   styles: [`
@@ -18,17 +21,20 @@ import { Component } from '@angular/core';
     }
 
     .app-component {
-      display: flex;
       background: linear-gradient(045deg, #3A9DD5, #6F3CD9);
-      padding: 3em 10em;
       color: #eeeeee;
+    }
+
+    .container {
+      display: flex;
+      padding: 3em 10em;
     }
 
     app-welcome {
       margin-bottom: 2em;
     }
 
-    .main {
+    .center {
       display: flex;
       flex-direction: column;
       margin-left: 2em;

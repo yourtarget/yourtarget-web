@@ -15,3 +15,8 @@ export class Step {
   description: string;
   questions: Question[];
 }
+
+export class Member {
+  id: number;
+  name: string;
+}
