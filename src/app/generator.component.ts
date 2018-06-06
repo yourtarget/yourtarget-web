@@ -142,8 +142,8 @@ export class GeneratorComponent implements OnInit {
       });
   }
 
-  onAnswer(question: Question, option: Option) {
-    console.log(`question: ${JSON.stringify(question)}, option: ${JSON.stringify(option)}`);
+  onAnswer(result: {question: Question, option: Option}) {
+    console.log(`question: ${JSON.stringify(result.question)}, option: ${JSON.stringify(result.option)}`);
   }
 
   onFinish(step: Step) {
