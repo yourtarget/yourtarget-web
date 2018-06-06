@@ -11,17 +11,11 @@ import { Option, Question, Step } from './models';
         <div class="pb">
           <span class="pb__title"><b>ПРОГРЕСС</b> СОЗДАНИЯ АВАТАРА</span>
           <div class="pb__steps">
-            <div class="pb-step">
+            <div *ngFor="let step of steps" class="pb-step">
               <div class="pb-step__value"></div>
-              <span class="pb-step__legend">Определение пихотипа<br/>1</span>
-            </div>
-            <div class="pb-step">
-              <div class="pb-step__value"></div>
-              <span class="pb-step__legend">Определение пихотипа<br/>1</span>
-            </div>
-            <div class="pb-step">
-              <div class="pb-step__value"></div>
-              <span class="pb-step__legend">Определение пихотипа<br/>1</span>
+              <span class="pb-step__legend">
+                {{step.title}}<br/>{{step.id}}
+              </span>
             </div>
           </div>
         </div>
@@ -34,7 +28,9 @@ import { Option, Question, Step } from './models';
           </app-step>
         </div>
         <div class="avatar-container">
-          <div class="avatar"></div>
+          <div class="avatar">
+            <img style="width: 100%" src="https://i.stack.imgur.com/o1z7p.jpg"/>
+          </div>
           <p class="avatar-info">
             ПО ЗАВЕРШЕНИЮ, БУДЕТ ОТКРЫТ НОВЫЙ
             УНИКАЛЬНЫЙ АВАТАР, КОТОРЫЙ БУДЕТ
@@ -118,8 +114,6 @@ import { Option, Question, Step } from './models';
     }
 
     .avatar {
-      height: 350px;
-      border: 1px solid #000000;
     }
 
     .avatar-info {
