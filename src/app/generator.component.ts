@@ -26,7 +26,14 @@ import { Component } from '@angular/core';
       </div>
       <div class="survey-avatar-generation">
         <div class="survey"></div>
-        <div class="avatar"></div>
+        <div class="avatar-container">
+          <div class="avatar"></div>
+          <p class="avatar-info">
+            ПО ЗАВЕРШЕНИЮ, БУДЕТ ОТКРЫТ НОВЫЙ
+            УНИКАЛЬНЫЙ АВАТАР, КОТОРЫЙ БУДЕТ
+            ПРИНАДЛЕЖАТЬ ТОЛЬКО ВАМ
+          </p>
+        </div>
       </div>
     </div>
   `,
@@ -88,19 +95,29 @@ import { Component } from '@angular/core';
 
     .survey-avatar-generation {
       display: flex;
-      height: 500px;
     }
 
     .survey {
-      flex-grow: 2;
-      height: 100%;
+      height: 500px;
+      width: 100%;
+      margin-right: 2em;
       border-radius: 10px;
+      border: 1px solid #000fff;
       background-color: rgba(60, 72, 145, 0.5);
     }
 
+    .avatar-container {
+      width: 350px;
+    }
+
     .avatar {
-      flex-grow: 1;
-      height: 100%;
+      height: 350px;
+      border: 1px solid #000000;
+    }
+
+    .avatar-info {
+      font-size: .8em;
+      text-align: center;
     }
   `]
 })
