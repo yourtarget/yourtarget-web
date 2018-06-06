@@ -1,54 +1,55 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { Step } from './models';
 
 @Injectable()
 export class ApiService {
-  fetchSteps() {
-    return Observable.of([
+  fetchSteps(): Observable<Step[]> {
+    return Observable.of<Step[]>([
       {
-        order: 1,
+        id: 1,
         title: 'Определение психотипа',
         description: `Постарайтесь отвечать правдиво, ведь только там может получится аватар,
        с учетом вашего психотипа. ВАЖНО! Мы никак не идентифицуруем Вас, поэтому вы можете не бояться,
        что Ваши ответы будут связаны с Вами`,
-        subSteps: [
+        questions: [
           {
-            order: 1,
+            id: 11,
             question: 'Как бы вы поступили?',
             options: [
               {
-                id: 1,
+                id: 111,
                 value: 'Пошел бы бухнул'
               }, {
-                id: 2,
+                id: 112,
                 value: 'Пошел бы гулять'
               }, {
-                id: 3,
+                id: 113,
                 value: 'Пошел бы бегать'
               }, {
-                id: 4,
+                id: 114,
                 value: 'Пошел бы спать'
               },
             ]
           },
         ],
       }, {
-        order: 2,
+        id: 2,
         title: 'Определение интересов',
         description: `Постарайтесь отвечать правдиво, нам нужно знать что вам интересно`,
-        subSteps: [
+        questions: [
           {
-            order: 1,
-            question: 'Как вам нравится?',
+            id: 21,
+            question: 'Что вам нравится?',
             options: [
               {
-                id: 1,
+                id: 211,
                 value: 'Кино'
               }, {
-                id: 2,
+                id: 212,
                 value: 'Музыка'
               }, {
-                id: 3,
+                id: 213,
                 value: 'Книги'
               },
             ]
