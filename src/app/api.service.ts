@@ -31,6 +31,15 @@ export class ApiService {
                 value: 'Пошел бы спать'
               },
             ]
+          }, {
+            id: 12,
+            question: 'Простой вопрос?',
+            options: [
+              {
+                id: 121,
+                value: 'Простой ответ'
+              },
+            ]
           },
         ],
       }, {
