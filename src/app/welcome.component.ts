@@ -60,7 +60,7 @@ import { Component } from '@angular/core';
 
     .goal {
       margin-bottom: 2em;
-      font-size: 0.9em;
+      font-size: 1.1em;
     }
 
     .cards {
@@ -81,7 +81,7 @@ import { Component } from '@angular/core';
 
     .card__description {
       padding: 0.3em;
-      font-size: 0.7em;
+      font-size: 0.9em;
     }
   `]
 })
